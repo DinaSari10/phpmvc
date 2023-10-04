@@ -1,7 +1,7 @@
 <?php
 
-class Mahasiswa_model {
-   private $table = 'mahasiswa';
+class Jurusan_model {
+   private $table = 'jurusan';
     private $db;
 
     public function __construct()
@@ -10,59 +10,50 @@ class Mahasiswa_model {
     }
 
 
-   public function getAllMahasiswa()
+   public function getAlljurusan()
    {
        $this->db->query('SELECT * FROM ' . $this->table);
        return $this->db->resultSet();
    }
 
-   public function getMahasiswaById($id)
+   public function getjurusanById($id)
    {
      $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
      $this->db->bind('id', $id);
      return $this->db->single();
    }
 
-   public function tambahDataMahasiswa($data)
+   public function tambahDatajurusan($data)
    {
-    $query = "INSERT INTO mahasiswa
+    $query = "INSERT INTO jurusan
     VALUES 
-    ('', :nama, :nrp, :email, :jurusan)";
+    ('', :nama)";
 
 
       $this->db->query($query);
       $this->db->bind('nama', $data['nama']);
-      $this->db->bind('nrp', $data['nrp']);
-      $this->db->bind('email', $data['email']);
-      $this->db->bind('jurusan', $data['jurusan']);
       
       $this->db->execute();
 
       return $this->db->rowCount();
     }
 
-  public function ubahDataMahasiswa($data)
+  public function ubahDatajurusan($data)
   {
-    $query = "UPDATE mahasiswa SET
+    $query = "UPDATE jurusan SET
               nama = :nama,
-              nis = :nis,
-              email = :email,
-              jurusan = :jurusan
               WHERE id = :id";
 
     $this->db->query($query);
     $this->db->bind('nama', $data['nama']);
-    $this->db->bind('nis', $data['nis']);
-    $this->db->bind('email', $data['email']);
-    $this->db->bind('jurusan', $data['jurusan']);
     $this->db->bind('id', $data['id']);
 
     $this->db->execute();
     return $this->db->rowCount();
   }
-    public function hapusDataMahasiswa($id)
+    public function hapusDatajurusan($id)
     {
-      $query = "DELETE FROM mahasiswa WHERE id = :id";
+      $query = "DELETE FROM jurusan WHERE id = :id";
       $this->db->query($query);
       $this->db->bind('id', $id);
   

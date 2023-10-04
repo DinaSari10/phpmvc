@@ -1,1 +1,3 @@
-<h1>My pages</h1>
+<div class="container mt-4">
+    <h1>My Page</h1>
+</div>

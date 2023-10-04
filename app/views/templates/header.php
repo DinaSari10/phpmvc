@@ -21,7 +21,11 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="<?= BASEURL; ?>">Home <span class="sr-only"></span></a>
       <a class="nav-item nav-link" href="<?= BASEURL; ?>/Mahasiswa">Mahasiswa</a>
+      <a class="nav-item nav-link" href="<?= BASEURL; ?>/Jurusan">Jurusan</a>
+      <a class="nav-item nav-link" href="<?= BASEURL; ?>/kelas">Kelas</a>
+      <a class="nav-item nav-link" href="<?= BASEURL; ?>/guru">Guru</a>
       <a class="nav-item nav-link" href="<?= BASEURL; ?>/about">About</a>
+      
     </div>
   </div>
   </div>

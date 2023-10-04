@@ -10,6 +10,20 @@
         <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#forModal" id="formModalLabel">
          Tambah Data Mahasiswa
         </button>
+        </div>
+        </div>
+
+        <div class="row mt-3">
+        <div class="col-lg-6">
+            <form action="<?= BASEURL; ?>siswa/cari" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="cari siswa..." name="keyword" id="keyword" aria-describedby="button-addon" autocomplete="off">
+                    <button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+                </div>
+                </form>
+        </div>
+    </div>
+
         <br><br>
             <h3>Daftar Mahasiswa</h3>
             <ul class="list-group">
